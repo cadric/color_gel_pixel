@@ -60,6 +60,6 @@ addopts = "-q"
 [tool.comfy]
 PublisherId = "cadric"
 DisplayName = "Color Gel Pixel"
-Icon = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/icon.png"
-Banner = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/docs/screenshot.webp"
+Icon = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/docs/icon.png"
+Banner = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/docs/banner.png"
 requires-comfyui = ">=0.3.65"

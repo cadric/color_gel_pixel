@@ -8,7 +8,7 @@ Minimal, typed ComfyUI nodes to apply color gels from JSON palettes.
 Package (registry/manager) name: `Color_Gel_Pixel`
 
 Preview
-- ![Screenshot](docs/screenshot.webp)
+- ![Banner](docs/banner.png)
 
 Changelog
 - See `CHANGELOG.md` for release notes.
