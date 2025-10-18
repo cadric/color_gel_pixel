@@ -2,6 +2,8 @@ SPDX-License-Identifier: MIT
 
 # Color Gel Nodes — Usage Guide
 
+![Color Gel Pixel icon](../icon.png)
+
 This plugin provides lightweight, deterministic ComfyUI nodes for applying color gels, previewing, and saving assets with pixel‑friendly options.
 
 - Nodes included
@@ -14,6 +16,9 @@ This plugin provides lightweight, deterministic ComfyUI nodes for applying color
 - Color Gel Palette
 
 - Palette location: `comfy_plugin/palettes/` (JSON). Changes require a Reload Custom Nodes.
+
+Example workflow
+- See `docs/workflow_color_gel_pixel.json` in the repo for a sample graph wiring Select → Batch (N) → Save → Preview, with Names (N) for filenames.
 
 ## Color Gel (select)
 - Purpose: Tint an image using a selected palette and numeric color index.

@@ -5,7 +5,18 @@ description = "ComfyUI nodes for palette-based color gel tinting, batch/preview 
 requires-python = ">=3.10"
 dependencies = []
 readme = "README.md"
-license = { text = "MIT" }
+license = { file = "LICENSE" }
+classifiers = [
+  "Operating System :: OS Independent",
+  "Environment :: GPU :: NVIDIA CUDA",
+  "Environment :: GPU :: AMD ROCm",
+  "Environment :: GPU :: Apple Metal",
+]
+
+[project.urls]
+Repository = "https://github.com/cadric/color_gel_pixel"
+"Bug Tracker" = "https://github.com/cadric/color_gel_pixel/issues"
+Documentation = "https://github.com/cadric/color_gel_pixel#readme"
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]
@@ -45,3 +56,10 @@ ignore_errors = true
 
 [tool.pytest.ini_options]
 addopts = "-q"
+
+[tool.comfy]
+PublisherId = "cadric"
+DisplayName = "Color Gel Pixel"
+Icon = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/icon.png"
+Banner = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/docs/screenshot.webp"
+requires-comfyui = ">=0.3.65"

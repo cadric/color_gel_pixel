@@ -2,8 +2,22 @@ SPDX-License-Identifier: MIT
 
 # Color Gel Pixel
 
+![Color Gel Pixel icon](icon.png)
+
 Minimal, typed ComfyUI nodes to apply color gels from JSON palettes.
 Package (registry/manager) name: `Color_Gel_Pixel`
+
+Preview
+- ![Screenshot](docs/screenshot.webp)
+
+Changelog
+- See `CHANGELOG.md` for release notes.
+
+Example workflow
+- See `docs/workflow_color_gel_pixel.json` for a ready-to-run example wiring:
+  - Load two images → Color Gel (select) per image → Color Gel Batch (N) → Color Gel Save → Color Gel Preview
+  - Color Gel Names (N) packs names to save files directly from node outputs
+  - Uses the new generic palettes (e.g., `neutral`, `blue`, ...)
 
 Highlights:
 - Preloaded palettes (no I/O during node execution)
