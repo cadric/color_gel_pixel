@@ -1,0 +1,240 @@
+{
+  "id": "c0a2e0d3-6a8d-4a9c-9a3d-8f3212b2a2c1",
+  "revision": 0,
+  "last_node_id": 8,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [200, -200],
+      "size": [240, 370],
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {"name": "image", "type": "COMBO", "widget": {"name": "image"}, "link": null},
+        {"name": "upload", "type": "IMAGEUPLOAD", "widget": {"name": "upload"}, "link": null}
+      ],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": [1]},
+        {"name": "MASK", "type": "MASK", "links": []}
+      ],
+      "widgets_values": ["example_a.png", "image"],
+      "properties": {"Node name for S&R": "LoadImage"}
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [200, 220],
+      "size": [240, 370],
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {"name": "image", "type": "COMBO", "widget": {"name": "image"}, "link": null},
+        {"name": "upload", "type": "IMAGEUPLOAD", "widget": {"name": "upload"}, "link": null}
+      ],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": [2]},
+        {"name": "MASK", "type": "MASK", "links": []}
+      ],
+      "widgets_values": ["example_b.png", "image"],
+      "properties": {"Node name for S&R": "LoadImage"}
+    },
+    {
+      "id": 3,
+      "type": "Color Gel (select)",
+      "pos": [520, -180],
+      "size": [290, 336],
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {"name": "image", "type": "IMAGE", "link": 1},
+        {"name": "strength", "type": "FLOAT", "widget": {"name": "strength"}, "link": null},
+        {"name": "mode", "type": "COMBO", "widget": {"name": "mode"}, "link": null},
+        {"name": "opacity", "type": "FLOAT", "widget": {"name": "opacity"}, "link": null},
+        {"name": "palette", "type": "COMBO", "widget": {"name": "palette"}, "link": null},
+        {"name": "color_number", "type": "INT", "widget": {"name": "color_number"}, "link": null},
+        {"name": "color", "type": "STRING", "widget": {"name": "color"}, "link": null},
+        {"name": "mosaic_cell", "type": "INT", "widget": {"name": "mosaic_cell"}, "link": null},
+        {"name": "quantize_fixed", "type": "BOOLEAN", "widget": {"name": "quantize_fixed"}, "link": null},
+        {"name": "fixed_palette", "type": "COMBO", "widget": {"name": "fixed_palette"}, "link": null},
+        {"name": "quantize_dither", "type": "COMBO", "widget": {"name": "quantize_dither"}, "link": null},
+        {"name": "posterize_bits", "type": "INT", "widget": {"name": "posterize_bits"}, "link": null}
+      ],
+      "outputs": [
+        {"name": "image", "type": "IMAGE", "links": [3]},
+        {"name": "selected_name", "type": "STRING", "links": []},
+        {"name": "selected_hex", "type": "STRING", "links": []},
+        {"name": "filename_stub", "type": "STRING", "links": [5]},
+        {"name": "selected_palette", "type": "STRING", "links": []},
+        {"name": "selected_index", "type": "INT", "links": []}
+      ],
+      "widgets_values": [0.35, "overlay", 1.0, "neutral", 1, "", 0, false, "", "fs", 0],
+      "properties": {"Node name for S&R": "Color Gel (select)"}
+    },
+    {
+      "id": 4,
+      "type": "Color Gel (select)",
+      "pos": [520, 260],
+      "size": [290, 336],
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {"name": "image", "type": "IMAGE", "link": 2},
+        {"name": "strength", "type": "FLOAT", "widget": {"name": "strength"}, "link": null},
+        {"name": "mode", "type": "COMBO", "widget": {"name": "mode"}, "link": null},
+        {"name": "opacity", "type": "FLOAT", "widget": {"name": "opacity"}, "link": null},
+        {"name": "palette", "type": "COMBO", "widget": {"name": "palette"}, "link": null},
+        {"name": "color_number", "type": "INT", "widget": {"name": "color_number"}, "link": null},
+        {"name": "color", "type": "STRING", "widget": {"name": "color"}, "link": null},
+        {"name": "mosaic_cell", "type": "INT", "widget": {"name": "mosaic_cell"}, "link": null},
+        {"name": "quantize_fixed", "type": "BOOLEAN", "widget": {"name": "quantize_fixed"}, "link": null},
+        {"name": "fixed_palette", "type": "COMBO", "widget": {"name": "fixed_palette"}, "link": null},
+        {"name": "quantize_dither", "type": "COMBO", "widget": {"name": "quantize_dither"}, "link": null},
+        {"name": "posterize_bits", "type": "INT", "widget": {"name": "posterize_bits"}, "link": null}
+      ],
+      "outputs": [
+        {"name": "image", "type": "IMAGE", "links": [4]},
+        {"name": "selected_name", "type": "STRING", "links": []},
+        {"name": "selected_hex", "type": "STRING", "links": []},
+        {"name": "filename_stub", "type": "STRING", "links": [6]},
+        {"name": "selected_palette", "type": "STRING", "links": []},
+        {"name": "selected_index", "type": "INT", "links": []}
+      ],
+      "widgets_values": [0.35, "overlay", 1.0, "neutral", 2, "", 0, false, "", "fs", 0],
+      "properties": {"Node name for S&R": "Color Gel (select)"}
+    },
+    {
+      "id": 5,
+      "type": "Color Gel Batch (N)",
+      "pos": [860, 20],
+      "size": [180, 180],
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {"name": "image_1", "type": "IMAGE", "link": 3},
+        {"name": "image_2", "type": "IMAGE", "link": 4}
+      ],
+      "outputs": [
+        {"name": "images", "type": "IMAGE", "links": [7]}
+      ],
+      "widgets_values": [],
+      "properties": {"Node name for S&R": "Color Gel Batch (N)"}
+    },
+    {
+      "id": 6,
+      "type": "Color Gel Names (N)",
+      "pos": [860, 260],
+      "size": [240, 280],
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {"name": "name_1", "type": "STRING", "widget": {"name": "name_1"}, "link": 5},
+        {"name": "prefix", "type": "STRING", "widget": {"name": "prefix"}, "link": null},
+        {"name": "suffix", "type": "STRING", "widget": {"name": "suffix"}, "link": null},
+        {"name": "name_2", "type": "STRING", "widget": {"name": "name_2"}, "link": 6}
+      ],
+      "outputs": [
+        {"name": "names_packed", "type": "STRING", "links": [8]}
+      ],
+      "widgets_values": ["", "", "", ""],
+      "properties": {"Node name for S&R": "Color Gel Names (N)"}
+    },
+    {
+      "id": 7,
+      "type": "Color Gel Save",
+      "pos": [1140, 20],
+      "size": [430, 520],
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {"name": "image", "type": "IMAGE", "link": 7},
+        {"name": "filename", "type": "STRING", "widget": {"name": "filename"}, "link": null},
+        {"name": "save_as", "type": "COMBO", "widget": {"name": "save_as"}, "link": null},
+        {"name": "lossless", "type": "BOOLEAN", "widget": {"name": "lossless"}, "link": null},
+        {"name": "compression", "type": "INT", "widget": {"name": "compression"}, "link": null},
+        {"name": "reduce_palette", "type": "BOOLEAN", "widget": {"name": "reduce_palette"}, "link": null},
+        {"name": "reduce_palette_max_colors", "type": "INT", "widget": {"name": "reduce_palette_max_colors"}, "link": null},
+        {"name": "save_opacity", "type": "BOOLEAN", "widget": {"name": "save_opacity"}, "link": null},
+        {"name": "flatten_bg_color", "type": "STRING", "widget": {"name": "flatten_bg_color"}, "link": null},
+        {"name": "resize_w", "type": "INT", "widget": {"name": "resize_w"}, "link": null},
+        {"name": "resize_h", "type": "INT", "widget": {"name": "resize_h"}, "link": null},
+        {"name": "resample", "type": "COMBO", "widget": {"name": "resample"}, "link": null},
+        {"name": "sharpen", "type": "BOOLEAN", "widget": {"name": "sharpen"}, "link": null},
+        {"name": "sharpen_amount", "type": "FLOAT", "widget": {"name": "sharpen_amount"}, "link": null},
+        {"name": "sharpen_radius", "type": "FLOAT", "widget": {"name": "sharpen_radius"}, "link": null},
+        {"name": "sharpen_threshold", "type": "INT", "widget": {"name": "sharpen_threshold"}, "link": null},
+        {"name": "use_names_for_filenames", "type": "BOOLEAN", "widget": {"name": "use_names_for_filenames"}, "link": null},
+        {"name": "names_packed", "type": "STRING", "widget": {"name": "names_packed"}, "link": 8},
+        {"name": "overwrite", "type": "BOOLEAN", "widget": {"name": "overwrite"}, "link": null},
+        {"name": "optimize_png", "type": "BOOLEAN", "widget": {"name": "optimize_png"}, "link": null},
+        {"name": "drop_metadata", "type": "BOOLEAN", "widget": {"name": "drop_metadata"}, "link": null},
+        {"name": "reduce_palette_dither", "type": "COMBO", "widget": {"name": "reduce_palette_dither"}, "link": null},
+        {"name": "reduce_palette_method", "type": "COMBO", "widget": {"name": "reduce_palette_method"}, "link": null},
+        {"name": "posterize_bits", "type": "INT", "widget": {"name": "posterize_bits"}, "link": null},
+        {"name": "palette_lock_across_batch", "type": "BOOLEAN", "widget": {"name": "palette_lock_across_batch"}, "link": null}
+      ],
+      "outputs": [
+        {"name": "image", "type": "IMAGE", "links": [9]},
+        {"name": "file", "type": "STRING", "links": []},
+        {"name": "files_json", "type": "STRING", "links": []}
+      ],
+      "widgets_values": [
+        "image",
+        "png",
+        false,
+        90,
+        true,
+        32,
+        true,
+        "#FFFFFF",
+        64,
+        64,
+        "pixel",
+        true,
+        1.5,
+        0.5,
+        1,
+        true,
+        "",
+        false,
+        true,
+        true,
+        "none",
+        "mediancut",
+        6,
+        true
+      ],
+      "properties": {"Node name for S&R": "Color Gel Save"}
+    },
+    {
+      "id": 8,
+      "type": "Color Gel Preview",
+      "pos": [1600, 20],
+      "size": [260, 100],
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {"name": "image", "type": "IMAGE", "link": 9},
+        {"name": "title", "type": "STRING", "widget": {"name": "title"}, "link": null},
+        {"name": "max_previews", "type": "INT", "widget": {"name": "max_previews"}, "link": null}
+      ],
+      "outputs": [
+        {"name": "image", "type": "IMAGE", "links": []}
+      ],
+      "widgets_values": ["Phase 2 demo", 10],
+      "properties": {"Node name for S&R": "Color Gel Preview"}
+    }
+  ],
+  "links": [
+    [1, 1, 0, 3, 0, "IMAGE"],
+    [2, 2, 0, 4, 0, "IMAGE"],
+    [3, 3, 0, 5, 0, "IMAGE"],
+    [4, 4, 0, 5, 1, "IMAGE"],
+    [5, 3, 3, 6, 0, "STRING"],
+    [6, 4, 3, 6, 3, "STRING"],
+    [7, 5, 0, 7, 0, "IMAGE"],
+    [8, 6, 0, 7, 17, "STRING"],
+    [9, 7, 0, 8, 0, "IMAGE"]
+  ]
+}

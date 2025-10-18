@@ -1,0 +1,47 @@
+[project]
+name = "Color_Gel_Pixel"
+version = "0.3.2"
+description = "ComfyUI nodes for palette-based color gel tinting, batch/preview helpers, and pixel-friendly saving."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "C4", "I", "UP", "N", "PL"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"comfy_plugin/nodes/save_node.py" = ["PLR0912", "PLR0913", "PLR0915", "PLR2004"]
+"comfy_plugin/nodes/*_node.py" = ["N802", "PLR2004", "PLR0912", "PLR0913", "PLR0915", "N812", "N806", "B007", "UP038"]
+"comfy_plugin/tests/*.py" = ["PLR2004", "N806", "I001", "C401"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+no_implicit_optional = true
+strict_equality = true
+files = ["comfy_plugin"]
+explicit_package_bases = true
+exclude = [
+  "^__init__\\.py$",
+  "^comfy_plugin/tests/",
+]
+
+[[tool.mypy.overrides]]
+module = ["comfy_plugin.tests.*"]
+ignore_errors = true
+
+[tool.pytest.ini_options]
+addopts = "-q"
