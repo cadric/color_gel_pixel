@@ -1,6 +1,6 @@
 [project]
 name = "Color_Gel_Pixel"
-version = "0.3.3"
+version = "0.3.4"
 description = "ComfyUI nodes for palette-based color gel tinting, batch/preview helpers, and pixel-friendly saving."
 requires-python = ">=3.10"
 dependencies = []
@@ -60,6 +60,6 @@ addopts = "-q"
 [tool.comfy]
 PublisherId = "cadric"
 DisplayName = "Color Gel Pixel"
-Icon = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/icon.png"
-Banner = "https://raw.githubusercontent.com/cadric/color_gel_pixel/main/banner.png"
+Icon = "https://raw.githubusercontent.com/cadric/color_gel_pixel/f7ff8f96d11ceaff6417f9e81cd4afe10bdc5def/icon.png"
+Banner = "https://raw.githubusercontent.com/cadric/color_gel_pixel/f7ff8f96d11ceaff6417f9e81cd4afe10bdc5def/banner.png"
 requires-comfyui = ">=0.3.65"
