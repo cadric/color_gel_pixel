@@ -43,29 +43,3 @@ Palettes:
 - Supports `{ "Name": "#RRGGBB", ... }` or list of objects with `name` + `hex`/`rgb`.
 
 License: MIT
-
-## Changelog
-
-- 0.2.0 (BREAKING)
-  - Removed deprecated `dither` boolean from Color Gel (select). Use `quantize_dither` (`fs`/`none`).
-  - Updated sample workflows to match new Select inputs.
-- 0.1.5
-  - Phase 3: Added utility node — Batch Flatten.
-- 0.1.4
-  - Phase 2: Save — palette lock across batch, palette method (`mediancut`/`fastoctree`/`maxcoverage`), dither (`none`/`fs`), posterize pre‑quantization.
-  - Phase 2: Select — posterize and dither choice for fixed‑palette quantization.
-- 0.1.3
-  - Phase 1: added `filename_stub`, `selected_palette`, `selected_index` outputs to Color Gel (select).
-  - Names (N): new `prefix`/`suffix` inputs; improved packing.
-  - Save: new `overwrite`, `optimize_png`, `drop_metadata` toggles; extra `files_json` output.
-  - Preview: input `max_previews` to cap UI load.
-- 0.1.2
-  - Housekeeping: remove palette-specific nodes, "Color Gel (any)", Batch (2), Batch Slice, standalone fixed-quantize node.
-  - Keep features inside "Color Gel (select)": mosaic and optional fixed-palette quantization.
-  - Save now supports batches and per-image names via "Color Gel Names (N)".
-- 0.1.1
-  - Add `opacity` to all nodes (any/select/palette-specific)
-  - Add tooltips for all inputs
-  - Preload palettes at import (no I/O during run)
-  - Reduce GPU memory by avoiding clones and using inference_mode
-  - Remove unused `palette_str` from select node
