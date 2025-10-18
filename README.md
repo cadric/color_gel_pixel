@@ -2,7 +2,7 @@ SPDX-License-Identifier: MIT
 
 # Color Gel Pixel
 
-![Color Gel Pixel icon](docs/icon.png)
+![Color Gel Pixel icon](icon.png)
 
 Minimal, typed ComfyUI nodes to apply color gels from JSON palettes.
 Package (registry/manager) name: `Color_Gel_Pixel`
